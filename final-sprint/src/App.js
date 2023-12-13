@@ -15,6 +15,7 @@ function App() {
           <Route path="/" element={<Nav />} />
         </Routes>
       </Router>
+      <Home />
     </div>
   );
 }
