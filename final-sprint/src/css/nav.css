@@ -4,6 +4,7 @@
   height: 69px;
   display: flex;
   align-items: center;
+  justify-content: space-between;
 }
 
 .nav-button {
@@ -15,22 +16,25 @@
 }
 
 .search-bar {
-  width: 30%;
+  width: 55%;
   height: 46px;
   display: flex;
   border-radius: 5px;
   background-color: white;
+  align-items: center;
+  justify-content: space-between;
 }
 
 .search-dropdown {
   background-color: #c6c6c6;
   height: 100%;
-  width: 7%;
+  width: 11%;
   display: flex;
   align-items: center;
   font-size: 15px;
   border-radius: 5px 0px 0px 5px;
-  text
+  font-size: 13px;
+  justify-content: center;
 }
 
 .search-text {
@@ -40,6 +44,46 @@
 }
 
 .search-dropdown p {
-  margin-left: 2px;
-  margin-right: 2px;
+  margin-right: 3px;
+}
+
+.search-bar p {
+  font-size: 11px;
+  margin-left: 10px;
+}
+
+.search-button {
+  height: 100%;
+}
+
+.language {
+  display: flex;
+  color: white;
+  align-items: center;
+}
+
+.home-button {
+  font-size: 15%;
+}
+
+.account {
+  color: white;
+  font-size: 12px;
+}
+
+#account-text {
+  font-weight: 700px;
+}
+
+.cart-button {
+  color: white;
+  text-decoration: none;
+  position: relative;
+  bottom: 10px;
+  margin-right: 10px;
+}
+
+.cart-button p {
+  position: relative;
+  top: 10px;
 }
