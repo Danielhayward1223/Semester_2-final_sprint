@@ -61,7 +61,7 @@ const Nav = () => {
         <p>Hello, User</p>
         <p id="account-text">Account & Lists</p>
       </div>
-      <Link to="/cart" className="cart-button">
+      <Link to="/Cart" className="cart-button">
         <p>Cart</p>
         <svg
           xmlns="http://www.w3.org/2000/svg"

@@ -1,5 +1,6 @@
-import { useState, useEffect } from 'react';
-import '../css/home.css';
+import { useState, useEffect } from "react";
+import "../css/home.css";
+import Nav from "./nav";
 
 const Home = () => {
   const [products, setProducts] = useState([]);
@@ -8,12 +9,12 @@ const Home = () => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await fetch('https://fakestoreapi.com/products');
+        const response = await fetch("https://fakestoreapi.com/products");
         const data = await response.json();
         setProducts(data);
         setLoading(false);
       } catch (error) {
-        console.error('Error fetching data:', error);
+        console.error("Error fetching data:", error);
         setLoading(false);
       }
     };
@@ -23,6 +24,7 @@ const Home = () => {
 
   return (
     <div>
+      <Nav />
       {loading ? (
         <p>Loading...</p>
       ) : (
