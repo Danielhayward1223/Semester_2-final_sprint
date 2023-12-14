@@ -20,7 +20,9 @@
 
 .product-title {
   margin: 10px 0;
-  white-space: wrap;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .product-price {
