@@ -23,6 +23,10 @@
   white-space: wrap;
 }
 
+.product-price {
+  font-weight: bold;
+}
+
 /* Media queries for smaller screens */
 @media (max-width: 1200px) {
   .product-box {
