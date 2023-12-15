@@ -11,6 +11,13 @@
   text-align: left;
   overflow: hidden; 
   position: relative;
+  text-decoration: none;
+  color: #333;
+  border-radius: 10px;
+}
+
+.product-box:hover {
+  background-color: #f8f8f8; 
 }
 
 .product-box img {
