@@ -38,6 +38,13 @@
     margin-top: 50px;
 }
 
+.cartBtn {
+    background-color: rgb(226, 176, 10);
+    font-family: 'Courier New', Courier, monospace;
+    margin-left: 180px;
+    margin-top: 75px;
+}
+
 .description-title {
     font-size: 15px;
     max-width: 250px;
