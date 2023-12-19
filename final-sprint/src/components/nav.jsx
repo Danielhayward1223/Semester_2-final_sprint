@@ -1,9 +1,14 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import "../css/nav.css";
+import { useShoppingCart } from "./ShoppingCartContext";
 
 const Nav = () => {
+
+  const {cartItemCount} = useShoppingCart(); 
+
   return (
+
     <div className="nav-bar">
       <Link to="/" className="nav-button">
         Shamazon.com
@@ -178,6 +183,7 @@ const Nav = () => {
             </linearGradient>
           </defs>
         </svg>
+        {cartItemCount > 0 && <span className="cart-count">{cartItemCount}</span>}
       </Link>
     </div>
   );

@@ -12,6 +12,7 @@ function App() {
     <div>
       <Router>
         <ShoppingCartProvider>
+          <switch>
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/cart" element={<Cart />} />
@@ -19,6 +20,7 @@ function App() {
             <Route path="/" element={<Nav />} />
             <Route path="/product/:productId" element={<Product />} />
           </Routes>
+          </switch>
         </ShoppingCartProvider>
       </Router>
     </div>

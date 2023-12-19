@@ -19,7 +19,7 @@ const Cart = () => {
         <ul className="item-container">
           {cartItems.map((item) => (
             <li key={item.id}>
-              The product is {item.name} and it is {item.price}
+              The product is {item.title} and it is {item.price}
             </li>
           ))}
         </ul>
