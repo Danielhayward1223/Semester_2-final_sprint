@@ -2,6 +2,7 @@ import React from "react";
 import useFetch from "./fetchData";
 import { useParams } from "react-router-dom";
 import Nav from "./nav";
+import { useState, useEffect } from "react";
 import "../css/product.css";
 
 const Product = () => {
@@ -10,6 +11,12 @@ const Product = () => {
   const fetchedData = useFetch();
   const products = fetchedData[0];
   const product = products.find((product) => product.id === parseInt(productId, 10));
+
+  const [cartItems, setCart] = useState([]);
+
+  const addToCart = () => {
+    setCart([...cartItems, product]);
+  }
 
   if (!product) {
     return <p>Product not found</p>;
@@ -28,6 +35,7 @@ const Product = () => {
     </div>
       <div className="checkout-box">
       <p className="product-prices">${product.price}</p>
+      <button className="cartBtn" onClick={addToCart}>Add to Cart</button>
 
     </div>
 
