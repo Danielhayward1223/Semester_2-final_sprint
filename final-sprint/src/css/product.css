@@ -39,7 +39,7 @@
 }
 
 .cartBtn {
-    background-color: rgb(226, 176, 10);
+    background-color: rgb(248, 218, 86);
     font-family: 'Courier New', Courier, monospace;
     margin-left: 180px;
     margin-top: 75px;
@@ -51,4 +51,19 @@
     position: fixed;
     right: 975px;
 }
+
+@media (max-width: 1200px) {
+    .product-box {
+    width: calc(50% - 20px); 
+    }
+}
+
+@media (max-width: 768px) {
+    .product-box {
+    width: calc(100% - 20px); 
+    }
+    .product-box img {
+    height: auto; 
+    }
+  }
 
