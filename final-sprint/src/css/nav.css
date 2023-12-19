@@ -86,4 +86,12 @@
 .cart-button p {
   position: relative;
   top: 10px;
+  left: 3px;
+}
+
+.cart-count {
+  position: relative;
+  right: 28px;
+  bottom: 32px;
+  font-size: 15px;
 }
