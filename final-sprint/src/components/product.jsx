@@ -9,8 +9,10 @@ const Product = () => {
   const { productId } = useParams();
   const fetchedData = useFetch();
   const products = fetchedData[0];
-  const product = products.find((product) => product.id === parseInt(productId, 10));
-  const {addToCart} = useShoppingCart();
+  const product = products.find(
+    (product) => product.id === parseInt(productId, 10)
+  );
+  const { addToCart } = useShoppingCart();
 
   if (!product) {
     return <p>Product not found</p>;
@@ -31,11 +33,10 @@ const Product = () => {
             <p className="product-titles">{product.title}</p>
             <p className="description-title">{modifiedDesc}</p>
           </div>
-          
         </div>
         <div className="checkout-box">
           <p className="product-prices">${product.price}</p>
-          <button className="cartBtn" onClick={addToCart}>
+          <button className="cartBtn" onClick={() => addToCart(product)}>
             Add to Cart
           </button>
         </div>
