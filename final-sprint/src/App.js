@@ -6,21 +6,20 @@ import Home from "./components/productlist";
 import Cart from "./components/cart.jsx";
 import Product from "./components/product.jsx";
 import { ShoppingCartProvider } from "./components/ShoppingCartContext.js";
+import Checkout from "./components/checkout.jsx";
 
 function App() {
   return (
     <div>
       <Router>
         <ShoppingCartProvider>
-          <switch>
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/cart" element={<Cart />} />
-            <Route path="/" element={<Nav />} />
+            <Route path="/checkout" element={<Checkout />} />
             <Route path="/" element={<Nav />} />
             <Route path="/product/:productId" element={<Product />} />
           </Routes>
-          </switch>
         </ShoppingCartProvider>
       </Router>
     </div>

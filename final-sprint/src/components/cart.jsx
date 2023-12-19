@@ -3,6 +3,7 @@ import "../css/cart.css";
 import Nav from "./nav";
 import { useState, useEffect } from "react";
 import { useShoppingCart } from "./ShoppingCartContext";
+import { Link } from "react-router-dom";
 
 const Cart = () => {
   const { cartItems, removeFromCart, clearCart } = useShoppingCart();
@@ -30,7 +31,9 @@ const Cart = () => {
                 </p>
               </div>
               <div className="button-container">
-                <button className="view">View item</button>
+                <button className="view">
+                  <Link to={`/product/${item.id}`}>View item</Link>
+                </button>
                 <button
                   className="delete"
                   onClick={() => removeFromCart(item.id)}
@@ -49,7 +52,9 @@ const Cart = () => {
           <h2>
             Subtotal [{cartItems.length}]: ${totalPrice}
           </h2>
-          <button>Proceed to checkout</button>
+          <button>
+            <Link to={"/checkout"}>Proceed to checkout</Link>
+          </button>
         </div>
       </div>
     </div>

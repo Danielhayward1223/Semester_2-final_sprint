@@ -66,4 +66,11 @@ li {
   border-radius: 8px;
   border: none;
   background-color: #ffa726;
+  text-decoration: none;
+}
+
+a:link,
+a:visited {
+  text-decoration: none;
+  color: black;
 }
