@@ -66,6 +66,7 @@ const Nav = () => {
         <p>Hello, User</p>
         <p id="account-text">Account & Lists</p>
       </div>
+      <div className="cart-container">
       <Link to="/Cart" className="cart-button">
         <p>Cart</p>
         <svg
@@ -185,6 +186,7 @@ const Nav = () => {
         </svg>
         {cartItemCount > 0 && <span className="cart-count">{cartItemCount}</span>}
       </Link>
+      </div>
     </div>
   );
 };
