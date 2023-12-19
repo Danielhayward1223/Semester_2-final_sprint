@@ -20,7 +20,7 @@
 }
 
 .product-prices {
-    position: fixed;
+    position: relative;
     font-size: 25px;
     margin:auto;
 }
@@ -36,6 +36,7 @@
 
 .product-description {
     margin-top: 50px;
+    padding-left: 400px;
 }
 
 .cartBtn {
@@ -48,13 +49,15 @@
 .description-title {
     font-size: 15px;
     max-width: 250px;
-    position: fixed;
     right: 975px;
 }
 
 @media (max-width: 1200px) {
     .product-box {
     width: calc(50% - 20px); 
+    }
+    .description-title {
+        width: calc(50% - 20px);
     }
 }
 
@@ -64,6 +67,9 @@
     }
     .product-box img {
     height: auto; 
+    }
+    .product-description {
+        width: calc(50% - 20%);
     }
   }
 

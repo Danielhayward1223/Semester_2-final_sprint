@@ -12,11 +12,7 @@ const Product = () => {
   const products = fetchedData[0];
   const product = products.find((product) => product.id === parseInt(productId, 10));
 
-  const [cartItems, setCart] = useState([]);
 
-  const addToCart = () => {
-    setCart([...cartItems, product]);
-  }
 
   if (!product) {
     return <p>Product not found</p>;
@@ -35,7 +31,7 @@ const Product = () => {
     </div>
       <div className="checkout-box">
       <p className="product-prices">${product.price}</p>
-      <button className="cartBtn" onClick={addToCart}>Add to Cart</button>
+      <button className="cartBtn" onClick={}>Add to Cart</button>
 
     </div>
 
