@@ -17,9 +17,11 @@ export const ShoppingCartProvider = ({ children }) => {
     setCartItems([]);
   };
 
+  const cartItemCount = cartItems.length;
+
   return (
     <ShoppingCartContext.Provider
-      value={{ cartItems, addToCart, removeFromCart, clearCart }}
+      value={{ cartItems, addToCart, removeFromCart, clearCart, cartItemCount }}
     >
       {children}
     </ShoppingCartContext.Provider>
