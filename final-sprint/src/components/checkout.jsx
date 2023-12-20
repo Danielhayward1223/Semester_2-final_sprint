@@ -1,6 +1,5 @@
 import React from "react";
 import "../css/checkout.css";
-import Nav from "./nav";
 import { useShoppingCart } from "./ShoppingCartContext";
 import { Link } from "react-router-dom";
 import { round } from "mathjs";
@@ -20,7 +19,6 @@ const Checkout = () => {
 
   return (
     <div className="main">
-      <Nav />
       <div className="main-container">
         <ul
           className="item-container"

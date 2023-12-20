@@ -11,17 +11,14 @@ import Checkout from "./components/checkout.jsx";
 function App() {
   return (
     <div>
-      <Router>
-        <ShoppingCartProvider>
-          <Routes>
-            <Route path="/" element={<Home />} />
-            <Route path="/cart" element={<Cart />} />
-            <Route path="/checkout" element={<Checkout />} />
-            <Route path="/" element={<Nav />} />
-            <Route path="/product/:productId" element={<Product />} />
-          </Routes>
-        </ShoppingCartProvider>
-      </Router>
+      <ShoppingCartProvider>
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/cart" element={<Cart />} />
+          <Route path="/checkout" element={<Checkout />} />
+          <Route path="/product/:productId" element={<Product />} />
+        </Routes>
+      </ShoppingCartProvider>
     </div>
   );
 }

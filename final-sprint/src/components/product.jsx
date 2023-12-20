@@ -24,7 +24,6 @@ const Product = () => {
 
   return (
     <div>
-      <Nav />
       <div className="container">
         <div className="product-informations">
           <img src={product.image} alt={`Product ${product.id}`} />
