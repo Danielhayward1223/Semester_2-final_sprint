@@ -1,9 +1,9 @@
 import React from "react";
 import "../css/checkout.css";
 import Nav from "./nav";
-import { useState, useEffect } from "react";
 import { useShoppingCart } from "./ShoppingCartContext";
 import { Link } from "react-router-dom";
+import { round } from "mathjs";
 
 const Checkout = () => {
   const { cartItems, removeFromCart, clearCart } = useShoppingCart();
@@ -12,7 +12,11 @@ const Checkout = () => {
 
   cartItems.map((item) => {
     totalPrice += item.price;
+    return totalPrice;
   });
+
+  let Tax = 0.15 * totalPrice;
+  let finalPrice = totalPrice + round(Tax * 100) / 100;
 
   return (
     <div className="main">
@@ -44,17 +48,41 @@ const Checkout = () => {
             </li>
           ))}
         </ul>
-        <div className="info-container">
-          <p>
-            your order qualifies for free shipping [excludes remote locations].
-            Choose this option at checkout.
-          </p>
-          <h2>
-            Subtotal [{cartItems.length}]: ${totalPrice}
-          </h2>
-          <button>
-            <Link to={"/checkout"}>Proceed to checkout</Link>
-          </button>
+        <div className="checkout-container">
+          <h3>
+            Order summary <br />
+          </h3>
+          <div className="summary-line">
+            <p>Subtotal ({`${cartItems.length}`} items):</p>
+            <p>${`${totalPrice}`}</p>
+          </div>
+          <div className="summary-line">
+            <p>Shipping & handling:</p>
+            <p>FREE</p>
+          </div>
+          <div className="summary-line">
+            <p>total before tax:</p>
+            <p>${`${totalPrice}`}</p>
+          </div>
+          <div className="summary-line">
+            <p>Estimated GST/HST:</p>
+            <p>${`${round(Tax * 100) / 100}`}</p>
+          </div>
+          <hr />
+          <div className="summary-line">
+            <h2>Order Total:</h2>
+            <p>${`${finalPrice}`}</p>
+          </div>
+          <div className="checkout-button-container">
+            <button
+              onClick={() => {
+                clearCart();
+                window.alert("Order Placed!");
+              }}
+            >
+              Place Order
+            </button>
+          </div>
         </div>
       </div>
     </div>

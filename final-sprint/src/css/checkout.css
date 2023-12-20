@@ -48,22 +48,47 @@ li {
   border: 1px solid black;
 }
 
-.info-container {
+.checkout-container {
   width: 400px;
-  height: 200px;
+  height: 20%;
   border: 1px solid black;
   border-radius: 8px;
   margin-top: 20px;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  padding-left: 10px;
 }
 
-.info-container button {
+.checkout-container button {
   width: 275px;
   height: 50px;
   border-radius: 8px;
   border: none;
   background-color: #ffa726;
+  justify-content: center;
+}
+
+.summary-line {
+  display: flex;
+  justify-content: space-between;
+  padding-right: 10px;
+  padding-left: 10px;
+}
+
+.summary-line h2 {
+  color: red;
+}
+
+.checkout-container hr {
+  width: 100%;
+  padding: 0;
+}
+
+.checkout-container h3 {
+  padding-left: 10px;
+}
+
+.checkout-button-container {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 5px;
 }

@@ -1,17 +1,17 @@
 import React from "react";
 import "../css/cart.css";
 import Nav from "./nav";
-import { useState, useEffect } from "react";
 import { useShoppingCart } from "./ShoppingCartContext";
 import { Link } from "react-router-dom";
 
 const Cart = () => {
-  const { cartItems, removeFromCart, clearCart } = useShoppingCart();
+  const { cartItems, removeFromCart } = useShoppingCart();
 
   let totalPrice = 0;
 
   cartItems.map((item) => {
     totalPrice += item.price;
+    return totalPrice;
   });
 
   return (

@@ -69,8 +69,8 @@ li {
   text-decoration: none;
 }
 
-a:link,
-a:visited {
+.main-container a:link,
+.main-container a:visited {
   text-decoration: none;
   color: black;
 }

@@ -1,6 +1,6 @@
 import "./App.css";
-import React, { useState } from "react";
-import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
+import React from "react";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Nav from "./components/nav";
 import Home from "./components/productlist";
 import Cart from "./components/cart.jsx";
