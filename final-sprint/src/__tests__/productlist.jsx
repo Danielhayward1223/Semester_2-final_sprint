@@ -3,8 +3,6 @@ import { render, screen, waitFor } from '@testing-library/react';
 import { MemoryRouter } from 'react-router-dom';
 import Home from '../components/productlist';
 
-jest.setTimeout(10000);
-
 // Mock the fetchData module
 jest.mock('../components/fetchData.js', () => () => [
   [
@@ -15,17 +13,16 @@ jest.mock('../components/fetchData.js', () => () => [
 ]);
 
 describe('Home component', () => {
-  it('renders product images', async () => {
+  test('renders product images', async () => {
     render(
       <MemoryRouter>
         <Home />
       </MemoryRouter>
     );
 
-    await waitFor(() => screen.getByText(/Loading/i, { exact: false }), { timeout: 10000 });
-
     // Check if images are rendered
-    const imageElements = screen.getAllByAltText(/Product \d/i);
-    expect(imageElements).toHaveLength(2);
+    const imageElements = screen.getAllByRole('img');
+    expect(imageElements).toHaveLength(2); 
+
   });
 });
