@@ -3,7 +3,7 @@ import "../css/cart.css";
 import Nav from "./nav";
 import { useShoppingCart } from "./ShoppingCartContext";
 import { Link } from "react-router-dom";
-
+import { round } from "mathjs";
 const Cart = () => {
   const { cartItems, removeFromCart } = useShoppingCart();
 
@@ -50,7 +50,7 @@ const Cart = () => {
             Choose this option at checkout.
           </p>
           <h2>
-            Subtotal [{cartItems.length}]: ${totalPrice}
+            Subtotal [{cartItems.length}]: ${round(totalPrice * 100) / 100}
           </h2>
           <button>
             <Link to={"/checkout"}>Proceed to checkout</Link>

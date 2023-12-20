@@ -71,7 +71,7 @@ const Checkout = () => {
           <hr />
           <div className="summary-line">
             <h2>Order Total:</h2>
-            <p>${`${finalPrice}`}</p>
+            <p>${`${round(finalPrice * 100) / 100}`}</p>
           </div>
           <div className="checkout-button-container">
             <button
