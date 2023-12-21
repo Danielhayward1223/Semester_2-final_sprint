@@ -3,8 +3,6 @@ import { render, screen, waitFor } from "@testing-library/react";
 import { MemoryRouter } from "react-router-dom";
 import Home from "../components/productlist";
 
-jest.setTimeout(10000);
-
 // Mock the fetchData module
 jest.mock("../components/fetchData.js", () => () => [
   [
@@ -25,7 +23,6 @@ jest.mock("../components/fetchData.js", () => () => [
   false,
 ]);
 
-// test to check if products render properly
 describe("Home component", () => {
   test("renders product images", async () => {
     render(
@@ -35,7 +32,7 @@ describe("Home component", () => {
     );
 
     // Check if images are rendered
-    const imageElements = screen.getAllByAltText(/Product \d/i);
+    const imageElements = screen.getAllByRole("img");
     expect(imageElements).toHaveLength(2);
   });
 });

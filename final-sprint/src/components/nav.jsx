@@ -66,7 +66,7 @@ const Nav = () => {
         <p id="account-text">Account & Lists</p>
       </div>
       <div className="cart-container">
-        <Link to="/Cart" className="cart-button">
+        <Link to="/cart" className="cart-button">
           <p>Cart</p>
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -183,7 +183,6 @@ const Nav = () => {
               </linearGradient>
             </defs>
           </svg>
-          {/*add number showing how many items are in cart. */}
           {cartItemCount > 0 && (
             <span className="cart-count">{cartItemCount}</span>
           )}
