@@ -3,7 +3,7 @@ Shamazon.com - Shopping made extremely difficult!
 
 
 Contributions by component:
-App - (Austin, Beck, Daniel)
+App - (Austin, Beck, Daniel) <br />
 fetchData - (Beck, Daniel)
 Nav - (Austin, Beck, Daniel)
 Product - (Austin)
