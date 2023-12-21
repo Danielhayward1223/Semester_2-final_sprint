@@ -7,6 +7,7 @@ import { round } from "mathjs";
 const Checkout = () => {
   const { cartItems, removeFromCart, clearCart } = useShoppingCart();
 
+  // getting total, subtotal and tax from caart items
   let totalPrice = 0;
 
   cartItems.map((item) => {

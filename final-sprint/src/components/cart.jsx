@@ -4,8 +4,10 @@ import { useShoppingCart } from "./ShoppingCartContext";
 import { Link } from "react-router-dom";
 import { round } from "mathjs";
 const Cart = () => {
+  // import from context
   const { cartItems, removeFromCart } = useShoppingCart();
 
+  // calculating total price
   let totalPrice = 0;
 
   cartItems.map((item) => {
@@ -20,6 +22,7 @@ const Cart = () => {
           className="item-container"
           style={{ listStyleType: "none", padding: "0" }}
         >
+          {/*make div for each item in the cart */}
           {cartItems.map((item) => (
             <li key={item.id}>
               <div className="image-description">

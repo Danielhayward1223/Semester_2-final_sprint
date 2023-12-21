@@ -1,14 +1,9 @@
 import { render, screen } from "@testing-library/react";
 import Checkout from "../components/checkout";
-import {
-  ShoppingCartProvider,
-  useShoppingCart,
-} from "../components/ShoppingCartContext";
-import { Link } from "react-router-dom";
-import { browserRouter as router } from "react-router-dom";
-import useFetch from "../components/fetchData";
+import { ShoppingCartProvider } from "../components/ShoppingCartContext";
 
-describe("Nav testing", () => {
+// Test to check if checkout page order button render correctly
+describe("checkout checking", () => {
   test("Checks if order button renders properly", () => {
     render(
       <ShoppingCartProvider>

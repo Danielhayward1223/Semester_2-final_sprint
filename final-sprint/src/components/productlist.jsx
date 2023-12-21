@@ -1,21 +1,22 @@
-import { useState, useEffect } from "react";
 import "../css/home.css";
 import useFetch from "./fetchData";
 import { Link } from "react-router-dom";
 
 const Home = () => {
+  // getting data from hook
   const fetchedData = useFetch();
   const products = fetchedData[0];
   const loading = fetchedData[1];
 
   return (
     <div>
+      {/*check if page is still loading */}
       {loading ? (
         <p>Loading...</p>
       ) : (
         <div className="product-container">
+          {/*make box for each product from api */}
           {products.map((product) => (
-            // connect this link to the product page once it's done :3
             <Link
               key={product.id}
               to={`/product/${product.id}`}

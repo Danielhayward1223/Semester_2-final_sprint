@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 
+// custom hook to fetch api data and use it across components
 const useFetch = () => {
   const [products, setProducts] = useState([]);
   const [loading, setLoading] = useState(true);
